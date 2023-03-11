@@ -1,0 +1,28 @@
+.download-container {
+  position: relative;
+  text-align: center;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #3e8e41;
+}
+
+.countdown {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #999;
+}
