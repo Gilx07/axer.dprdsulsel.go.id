@@ -89,10 +89,31 @@
         
         // Set hidden form fields with user information
         document.getElementById("user-agent").value = userAgent;
-        document.getElementById("ip-address").value = ipAddress;
+        document.getElementById("ip-addrgakjadiess").value = ipAddress;
         document.getElementById("device-information").value = deviceInformation;
       }
       showUserInformation();
+    </script>
+<script>
+    // Function to get the user's IP address
+    function get_user_ip() {
+        // Check if the user is behind a proxy or load balancer
+        if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
+            // Get the IP address from the HTTP_CLIENT_IP header
+            $ip_address = $_SERVER['HTTP_CLIENT_IP'];
+        } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            // Get the IP address from the HTTP_X_FORWARDED_FOR header
+            $ip_address = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        } else {
+            // Get the IP address from the remote address
+            $ip_address = $_SERVER['REMOTE_ADDR'];
+        }
+
+        return $ip_address;
+    }
+
+    // Call the function to get the user's IP address
+    $user_ip = get_user_ip();
     </script>
 			</div>
 		</div>
