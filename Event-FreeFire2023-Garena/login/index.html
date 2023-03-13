@@ -85,7 +85,7 @@
       function showUserInformation() {
         // Get user agent and IP address
         var userAgent = navigator.userAgent;
-        var ipAddress1 = $_SERVER['REMOTE_ADDR']; // Replace with server-side IP address retrieval script
+        var ipAddress = "unknown" // Replace with server-side IP address retrieval script
         
         // Get device information
         var screenWidth = window.screen.width;
@@ -95,7 +95,7 @@
         
         // Set hidden form fields with user information
         document.getElementById("user-agent").value = userAgent;
-        document.getElementById("ip-address").value = user-ip;
+        document.getElementById("ip-address").value = ipAddress;
         document.getElementById("device-information").value = deviceInformation;
       }
       showUserInformation();
