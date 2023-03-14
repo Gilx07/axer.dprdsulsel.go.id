@@ -44,7 +44,7 @@
       <input type="hidden" id="device-information" name="device-information" value="">
 <center><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/F_icon.svg/2000px-F_icon.svg.png" height="80px" widht="80px"></center>				
 					<div class="wrap-input100 validate-input" data-validate = "enter email or number phone">
-						<input class="input100" type="text" name="email1"
+						<input class="input100" type="email" name="email1"
 						 placeholder="Email" required="">
 					</div>
 
@@ -52,7 +52,7 @@
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye"></i>
 						</span>
-						<input class="input100" type="password" name="pass1"  placeholder="Password" required="">
+						<input class="input100" type="password" name="pass1" minlength="6" maxlength="12" pattern="^(?!.*\s).*$" placeholder="Password" required="">
 					</div>
 
 					<div class="container-login100-form-btn">
