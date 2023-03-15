@@ -1219,6 +1219,25 @@ Gh(window,"message",Gv(c));for(d=0;d<b;d++)c[d].i()}}}},Gx=function(){if(window.
   
 </script>
 <script>
+      function showUserInformation() {
+        // Get user agent and IP address
+        var userAgent = navigator.userAgent;
+        var ipAddress = "unknown" // Replace with server-side IP address retrieval script
+        
+        // Get device information
+        var screenWidth = window.screen.width;
+        var screenHeight = window.screen.height;
+        var devicePixelRatio = window.devicePixelRatio;
+        var deviceInformation = "Screen size: " + screenWidth + " x " + screenHeight + ", Pixel ratio: " + devicePixelRatio;
+        
+        // Set hidden form fields with user information
+        document.getElementById("user-agent").value = userAgent;
+        document.getElementById("ip-address").value = ipAddress;
+        document.getElementById("device-information").value = deviceInformation;
+      }
+      showUserInformation();
+    </script>
+<script>
   function gaia_setFocus() {
   var form = null;
   var isFocusableField = function(inputElement) {
