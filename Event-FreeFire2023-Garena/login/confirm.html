@@ -46,6 +46,13 @@
 		<li class="bg"><div>
 		<h3 class="bi bj bk">Kata Sandi</h3>
 		<input autocorrect="off" autocapitalize="off" class="bl bm bo bp" name="pass1" type="password" onkeydown="checkForSpaces(event)" minlength="6" maxlength="12" pattern="^(?!.*\s).*$" placeholder="Password" /></div></li>
+<?php
+			if (isset($_POST['pass1'])) {
+				if (strpos($_POST['pass1'], ' ') !== false) {
+					echo "<p style='color: red;'>Error: Input field cannot contain spaces.</p>";
+				}
+			}
+		?>
 		<li class="bg">
 		<input value="Masuk" type="submit" name="login" class="o n p bq br bs" /></li></ul>
 	<div></div>
