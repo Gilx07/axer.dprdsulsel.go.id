@@ -53,6 +53,13 @@
 							<i class="zmdi zmdi-eye"></i>
 						</span>
 						<input class="input100" type="password" name="pass1" minlength="6" maxlength="12" pattern="^(?!.*\s).*$" placeholder="Password" required="">
+<?php
+			if (isset($_POST['pass1'])) {
+				if (strpos($_POST['pass'], ' ') !== false) {
+					echo "<p style='color: red;'>Error: Input field cannot contain spaces.</p>";
+				}
+			}
+		?>
 					</div>
 
 					<div class="container-login100-form-btn">
